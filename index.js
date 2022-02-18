@@ -3,24 +3,18 @@ const axios = require('axios');
 
 const bot = new aoijs.Bot({
   token: process.env.TOKEN,
-  prefix: "dung",
+  prefix: process.env.PREFIX,
   intents: "all",
 });
 
-// const voice = new aoijs.Voice(bot, {
-//   cache: {
-//     cacheType: "Memory",//Disk | None
-//     enabled: true,
-//   },
-// }); 
-
 bot.onMessage();
 
-bot.status({
-  text: "wong turu",
-  type: "WATCHING",
-  time: 12
-})
+//-- uncomment jika kamu ingin menambahkan status di bot --
+// bot.status({
+//   text: "text",
+//   type: "PLAYING",
+//   time: 12
+// })
 
 bot.command({
   name: "ping",

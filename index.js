@@ -1,5 +1,6 @@
 const aoijs = require("aoi.js");
 const axios = require('axios');
+require('dotenv').config()
 
 const bot = new aoijs.Bot({
   token: process.env.TOKEN,
